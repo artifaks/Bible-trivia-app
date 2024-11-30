@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Daily Bible Trivia & Study | Grow Your Faith Daily</title>
+    <meta name="description" content="Engage with daily Bible trivia, verses, and study materials. Grow your faith through interactive learning, daily verses, and Biblical wisdom. Join our community today!">
+    <meta name="keywords" content="Bible trivia, daily verse, Bible study, Christian games, Scripture learning, faith building, Bible quiz">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://your-domain.com/">
+    <meta property="og:title" content="Daily Bible Trivia & Study">
+    <meta property="og:description" content="Grow your faith through daily Bible trivia, verses, and interactive study materials.">
+    <meta property="og:image" content="https://your-domain.com/images/social-share.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://your-domain.com/">
+    <meta property="twitter:title" content="Daily Bible Trivia & Study">
+    <meta property="twitter:description" content="Grow your faith through daily Bible trivia, verses, and interactive study materials.">
+    <meta property="twitter:image" content="https://your-domain.com/images/social-share.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://your-domain.com/">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Daily Bible Trivia & Study",
+        "description": "Interactive Bible trivia game and study platform for growing your faith",
+        "url": "https://your-domain.com",
+        "applicationCategory": "Education, Religious",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "author": {
+            "@type": "Organization",
+            "name": "Your Ministry Name"
+        }
+    }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Daily Bible Trivia</h1>
+            <p class="subtitle">Grow in faith through study and play</p>
+            <div class="social-buttons">
+                <button onclick="shareOnFacebook()" class="social-btn facebook">Share on Facebook</button>
+                <button onclick="shareOnTwitter()" class="social-btn twitter">Share on Twitter</button>
+                <a href="https://cash.app/$justmalik1" target="_blank" class="btn donate-btn">Support Our Ministry <i class="fas fa-heart"></i></a>
+            </div>
+            <div class="header-actions">
+                <button id="subscribe-btn" class="btn subscribe-btn">
+                    <span class="btn-icon">✉️</span>
+                    Subscribe
+                </button>
+            </div>
+        </header>
+
+        <section id="daily-verse" class="card">
+            <h2>Today's Verse</h2>
+            <div class="verse-content">
+                <p id="verse-text"></p>
+                <p id="verse-reference"></p>
+            </div>
+            <button id="share-verse" class="btn">Share <i class="fas fa-share"></i></button>
+        </section>
+
+        <section id="bible-study" class="card">
+            <h2>Daily Bible Study</h2>
+            <div id="study-content">
+                <div id="study-text"></div>
+                <div id="reflection-questions"></div>
+            </div>
+        </section>
+
+        <div id="game-container">
+            <section id="trivia-game" class="card">
+                <h2>Bible Trivia Challenge</h2>
+                <div class="score-container">
+                    <span>Score: <span id="score">0</span></span>
+                    <span>Streak: <span id="streak">0</span></span>
+                </div>
+                <div id="progress-container">
+                    <div id="progress-bar"></div>
+                </div>
+                <div id="question-counter"></div>
+                <div id="question-container">
+                    <p id="question"></p>
+                    <div id="options" class="options-grid"></div>
+                </div>
+                <button id="next-question" class="btn">Next Question</button>
+            </section>
+            <div id="achievements-container" class="hidden">
+                <h2>Achievements</h2>
+                <div id="achievements-list" class="achievements-grid"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Subscribe Modal -->
+    <div id="subscribe-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="subscribe-form-container">
+                <h2>Subscribe to Daily Bible Content</h2>
+                <p>Get daily verses, trivia questions, and Bible study materials delivered to your inbox!</p>
+                <form id="subscribe-form" onsubmit="handleSubscribe(event)">
+                    <div class="form-group">
+                        <label for="subscribe-email">Email Address</label>
+                        <input type="email" id="subscribe-email" placeholder="your@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" id="subscribe-preferences-verses" checked>
+                            Daily Verses
+                        </label>
+                        <label>
+                            <input type="checkbox" id="subscribe-preferences-trivia" checked>
+                            Trivia Questions
+                        </label>
+                        <label>
+                            <input type="checkbox" id="subscribe-preferences-study" checked>
+                            Bible Study
+                        </label>
+                    </div>
+                    <button type="submit" class="btn subscribe-submit-btn">Subscribe Now</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

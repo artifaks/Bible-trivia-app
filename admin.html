@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bible Trivia Admin Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="admin-styles.css">
+</head>
+<body>
+    <div class="admin-container">
+        <header class="admin-header">
+            <h1>Bible Trivia Admin Portal</h1>
+            <nav class="admin-nav">
+                <button class="tab-btn active" data-tab="trivia">Trivia Questions</button>
+                <button class="tab-btn" data-tab="verses">Daily Verses</button>
+                <button class="tab-btn" data-tab="courses">Bible Courses</button>
+                <button class="tab-btn" data-tab="subscribers">Subscribers</button>
+            </nav>
+        </header>
+
+        <main class="admin-content">
+            <!-- Trivia Questions Tab -->
+            <section id="trivia" class="tab-content active">
+                <h2>Manage Trivia Questions</h2>
+                <button class="add-btn" onclick="showAddQuestionForm()">Add New Question</button>
+                <div id="questions-list" class="content-list"></div>
+            </section>
+
+            <!-- Daily Verses Tab -->
+            <section id="verses" class="tab-content">
+                <h2>Manage Daily Verses</h2>
+                <button class="add-btn" onclick="showAddVerseForm()">Add New Verse</button>
+                <div id="verses-list" class="content-list"></div>
+            </section>
+
+            <!-- Bible Courses Tab -->
+            <section id="courses" class="tab-content">
+                <h2>Manage Bible Courses</h2>
+                <button class="add-btn" onclick="showAddCourseForm()">Add New Course</button>
+                <div id="courses-list" class="content-list"></div>
+            </section>
+
+            <!-- Subscribers Tab -->
+            <section id="subscribers" class="tab-content">
+                <h2>Manage Subscribers</h2>
+                <div class="subscriber-stats">
+                    <div class="stat-card">
+                        <h3>Total Subscribers</h3>
+                        <p id="total-subscribers">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Active This Week</h3>
+                        <p id="active-subscribers">0</p>
+                    </div>
+                </div>
+                <div id="subscribers-list" class="content-list"></div>
+            </section>
+        </main>
+
+        <!-- Modal Forms -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div id="modal-form"></div>
+            </div>
+        </div>
+    </div>
+    <script src="admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "bible-trivia-app",
+  "version": "1.0.0",
+  "description": "Daily Bible Trivia and Study App",
+  "main": "app.js",
+  "scripts": {
+    "start": "serve .",
+    "build": "mkdir -p dist && cp *.{html,css,js} dist/"
+  },
+  "keywords": [
+    "bible",
+    "trivia",
+    "study",
+    "daily-verse"
+  ],
+  "author": "justmalik1",
+  "license": "MIT",
+  "dependencies": {
+    "serve": "^14.0.0"
+  }
+}
