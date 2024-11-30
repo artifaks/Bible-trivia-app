@@ -1,3 +1,5 @@
+# Bible-trivia-app
+
 # Daily Bible Trivia & Study
 
 An interactive Bible trivia and study application that helps users grow in their faith through daily verses, trivia questions, and Bible study materials.
